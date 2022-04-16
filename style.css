@@ -1,0 +1,588 @@
+/*Default CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1240px;
+    margin: auto;
+}
+
+.img{
+    max-width: 100%;
+}
+
+/* Before & After Use */
+.header-section{
+	margin-top: 70px;
+}
+
+.mydiv h1{
+    font-size: 40px;
+    text-align: center;
+}
+.mydiv h1::before{
+    content: "Before Use";
+    color: red;
+    font-size: 40px;
+    box-shadow: 2px 2px 30px 10px #000;
+    transition: .5s;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin-right: 15px;
+}
+
+.mydiv h1:hover::before{
+    background-color: #9b59b6;
+    color: white;
+}
+
+.image-div{
+	width: 200px;
+	height: 200px;
+	background: red;
+	margin: 10px auto;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.image-div>img{
+	width: 200px;
+	height: 200px;
+}
+
+.image-div::before{
+	content: "";
+	height: 50%;
+	width: 50%;
+	background: blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+	transition: all 2s ease;
+}
+
+.image-div::after{
+	content: "";
+	height: 50%;
+	width: 50%;
+	background: green;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0.6;
+	transition: all 2s ease;
+}
+
+.image-div::before{
+	content: "";
+	height: 50%;
+	width: 50%;
+	background: blue;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0.6;
+	transition: all 2s ease;
+}
+
+.image-div::after{
+	content: "";
+	height: 50%;
+	width: 50%;
+	background: green;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	opacity: 0.6;
+	transition: all 2s ease;
+}
+
+.image-div:hover.image-div::before{
+	left: 100%;
+	top: 100%;
+}
+
+.image-div:hover.image-div::after{
+	right: 100%;
+	top: 100%;
+}
+
+.mydiv h2{
+    font-size: 40px;
+    text-align: center;
+} 
+
+.mydiv h2::after{
+    content: "After Use";
+    color: red;
+    font-size: 40px;
+    box-shadow: 2px 2px 30px 10px #000;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin-left: 15px;
+}
+
+.mydiv h2:hover::after{
+    background-color: #9b59b6;
+    color: white;
+}
+
+.mydiv .image-div{
+    width: 200px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.image-div img{     
+    display: inline-block;
+    width: 200px;
+    border: 2px solid #000;
+}
+
+.image-div img::before{
+    content: "Add Before Use"; 
+    color: red;
+    font-size: 40px;
+    box-shadow: 2px 2px 30px 10px #000;
+    display: inline-block;
+}
+
+/* Subscribe section */
+.subscribe-section{
+    background-color: #f2f2f2;
+    padding: 60px;
+    margin-bottom: 25px;
+}
+
+.subscribe-section .input-field{
+    text-align: center;
+}
+
+.subsmail {
+	padding: 14px 0px;
+	text-align: left;
+	border: none;
+	border-bottom: 1px solid red;
+	font-size: 15px;
+	width: 600px; 
+}
+
+.subsribe {
+    padding: 14px 30px;
+    background-color: #e74c3c;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+	font-size: 17px;       
+    margin-left: -5px;    
+} 
+
+
+.subsribe::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(10, 183, 188);             
+    z-index: -1;
+    transition: .6s;
+    border-bottom: 5px dotted #000;
+} 
+.subsribe:hover::before{
+    width: 100%;
+}
+
+/* use font-awesome-icon */
+.icon-code{
+    text-align: center;
+    padding: 20px 0px;
+}   
+.icon-code .code-icon{
+    font-size: 30px;
+}
+.icon-code h2{
+    font-size: 30px;
+    padding: 10px 0px;
+    color: #8a2be2;
+    display: inline-block;
+} 
+.icon-code h3{
+    padding: 20px 0px;
+    color: #64e22b;
+    font-size: 31px;
+} 
+
+/* use after */
+.icon-code .code-icon::after{
+    content: '\f121';
+    font-family:'Font Awesome 5 Free';
+    font-weight: 700;
+    color: #3498db;
+    font-size: 112px;
+    margin-left: 16px; 
+}
+
+/* Use before List style Image */
+.list-style-image{
+    width: 400px;
+    margin: 40px auto;
+}
+
+.list-style-image h1{
+
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 17px;
+}
+
+.list-style-image ul{
+    display: inline-block;
+    text-align: center;
+}
+
+.list-style-image ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 25px;
+}
+
+.list-style-image ul li::before{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(./img/jillur.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+
+/* button css */
+
+.btn-button{
+    padding: 15px 40px;
+    background-color: #e74c3c;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.btn-button::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(10, 183, 188);             
+    z-index: -1;
+    transition: .6s;
+    border-radius: 50px;
+}
+
+.btn-button::after{
+    content: "";
+    position: absolute;
+    width:0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color:#e74c3c ;
+    background-color: rgb(63, 10, 188);             
+    z-index: -1;
+    transition: .5s;
+    border-radius: 50px;
+}
+
+.btn-button:hover::before{
+    width: 100%;
+}
+    
+
+.btn-button:hover::after{
+    width:50% ;
+    color: red;
+    }
+
+.click-me {         
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+/* btn-button1 */
+.btn-button1{
+    padding: 20px 149px;
+    background-color: #e74c3c;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.btn-button1::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgb(10, 183, 188);             
+    z-index: -1;
+    transition: .6s;
+    border-radius: 0 50px 50px 0;
+}
+
+.btn-button1::after{
+    content: "";
+    position: absolute;
+    width:0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(63, 10, 188);             
+    z-index: -1;
+    transition: .5s;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.btn-button1:hover::before{
+    width: 50%;
+}
+    
+
+.btn-button1:hover::after{
+    width:50% ;
+    color: red;
+    }
+
+.click-me1 {         
+    font-size: 20px;
+    text-align: center;
+    margin: 40px;
+}
+
+/* btn-button2 */
+.btn-button2{
+    padding: 20px 75px;
+    background-color: #2c3e50;
+    color: white;
+    display: inline-block;
+    text-decoration: none; 
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.btn-button2::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: rgb(10, 183, 188);             
+    z-index: -1;
+    transition: .6s;
+    border-radius: 50px;
+}
+
+.btn-button2::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    color:#e74c3c ;
+    background-color: rgb(63, 10, 188);             
+    z-index: -1;
+    transition: .5s;
+    border-radius: 50px;
+}
+
+.btn-button2:hover::before{
+    height: 100%;
+}
+    
+
+.btn-button2:hover::after{
+    height:0% ;
+    color: red;
+    }
+
+.click-me2 {         
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+/* btn-button3 */
+.btn-button3{
+    padding: 15px 40px;
+    background-color: #3498db;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.btn-button3::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: .6s;
+    border-radius: 50px;
+}
+
+.btn-button3::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+    border-radius: 50px;
+}
+
+.btn-button3:hover::before{
+    height: 100%;
+    background-color: rgb(63, 10, 188);
+}
+    
+
+.btn-button3:hover::after{
+    width:100% ;    
+    background-color: rgb(63, 10, 188);
+    }
+
+.click-me3 {         
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+
+/*Footer Section*/
+.footer{
+    
+}
+.footer-content{
+    background: #000;
+    color: #fff;
+    padding: 15px;
+}
+.footer-content p{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-icon{
+   
+    background-color: #000;
+    padding: 0px 0px 20px 0px;
+}
+
+.footer-icon .Social-Menu{ 
+    text-align: center; 
+}
+.footer-icon .Social-Menu li{
+    display: inline-block;
+}
+.footer-icon .Social-Menu li a{
+    color: #1c7ee6b8;
+    font-size: 35px;
+    margin-left: 15px;
+    transition: .5s;
+}
+.footer-icon .Social-Menu li a:hover{
+    color: rgba(231, 231, 21, 0.735);
+}
+
+.btn{
+    padding: 5px 15px;
+    background-color: #e74c3c;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(10, 183, 188);             
+    z-index: -1;
+    transition: .6s;
+    border-radius: 50px 0 0 50px;
+}
+
+
+.btn::after{
+    content: "";
+    position: absolute;
+    width:0%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    color:#e74c3c ;
+    background-color: rgb(63, 10, 188);             
+    z-index: -1;
+    transition: .5s;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.btn:hover::before{
+    width: 50%;
+}
+    
+.btn:hover::after{ 
+    width:50% ;
+    
+    }
+
+.click {         
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
